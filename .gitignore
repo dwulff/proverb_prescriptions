@@ -1,0 +1,7 @@
+.R-library/
+.Rproj.user/
+.Rhistory
+.RData
+Rplots.pdf
+.DS_Store
+/results/
