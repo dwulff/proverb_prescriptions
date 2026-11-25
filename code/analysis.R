@@ -224,7 +224,7 @@ polarity_llm = data_ratings |>
   pivot_longer(-proverb_id) |> 
   group_by(name) |> 
   summarize(mid = 1-mean(value == 3),
-            polarity = (2-abs(mean(value-3)))/2) |> 
+            polarity = min(mean(value %in% c(1,2)), mean(value %in% c(4,5))) * 2) |> 
   mutate(name = str_remove(name, "_num"))
 
 human_prescr_sel = combined |> 
@@ -238,7 +238,7 @@ polarity_human = combined |>
   filter(dimension != "prescriptivity") |> 
   group_by(dimension) |> 
   summarize(mid = 1-mean(value_human == 3),
-            polarity = (2-abs(mean(value_human-3)))/2) 
+            polarity = min(mean(value_human %in% c(1,2)), mean(value_human %in% c(4,5))) * 2) 
 
 
 levels = c("risk", "time", "social", "autonomy","trust","honesty", "equality","kindness","cooperation") 

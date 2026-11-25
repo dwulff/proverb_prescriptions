@@ -30,9 +30,9 @@
 
 Model-based dimension analyses use items with model prescriptivity > 3. Human-based dimension analyses select items whose prescriptivity averaged over raters and conditions exceeds 3. Thus the human and model subsets need not coincide.
 
-`mid` is the plotted “Extremity”: `1 - mean(value == 3)`. `polarity` is `1 - abs(mean(value - 3))/2`. The latter measures closeness of the mean to neutral, not the coexistence of conflicting prescriptions. Entirely neutral and symmetrically opposing ratings can both yield polarity 1.
+`mid` is the plotted “Extremity”: `1 - mean(value == 3)`. `polarity` is `2 * min(mean(value %in% c(1, 2)), mean(value %in% c(4, 5)))`: twice the smaller proportion of ratings at the two opposing poles. Entirely neutral ratings yield 0; equally frequent opposing poles with no neutral ratings yield 1. This uses the alternative formula commented in the saved original script, confirmed by the author as the formula used for the paper.
 
-The human polarity/extremity calculation pools the two individual raters and their within-condition average, across both conditions. This preserves the original figure, but the inclusion of averaged ratings affects the frequency of exact-neutral responses. Human-model alignment compares averaged human ratings with the model, whereas human-human alignment compares individuals.
+The human polarity/extremity calculation pools the two individual raters and their within-condition average, across both conditions. The inclusion of averaged ratings affects the frequency of exact-neutral responses. Polarity uses exact membership in {1, 2} and {4, 5}, so fractional averages are retained in the denominator but count toward neither pole. Human-model alignment compares averaged human ratings with the model, whereas human-human alignment compares individuals.
 
 Source summaries retain source-row multiplicity. The 77 records associated with the reserved empty-entry ID have no model rating and count as non-prescriptive in the original source prescriptivity denominator. They do not enter the overall corpus or prescriptive dimension analyses. Records with missing source codes are excluded from source summaries.
 
