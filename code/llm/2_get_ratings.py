@@ -42,7 +42,7 @@ gists = proverb_tbl["gist_clean"].values
 
 texts = [f"**Proverb and Gist:**\nProverb: {proverb}\nGist: {gist}" for proverb, gist in zip(proverbs, gists)]
 
-system_msg = "You are an expert on proverbs and decision making who accurately assesses the meanings of proverbs."
+system_prompt = "You are an expert on proverbs and decision making who accurately assesses the meanings of proverbs."
 
 assessments = [
   "Does the proverb provide guidance on how to act or make decisions?",
