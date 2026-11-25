@@ -1,6 +1,6 @@
 # LLM annotation procedure
 
-The [historical scripts](../code/llm/historical/) preserve the saved original code (only the private corpus download URL is redacted). **`annotate.py` is a new, adapted runner, not the code that generated the supplied ratings.** See the [preservation audit](llm-audit.md) for verified matches and unresolved historical details.
+The [historical scripts](../code/llm/historical/) preserve the saved original code (only the private corpus download URL is redacted). **`annotate.py` is a new, adapted runner, not the code that generated the supplied ratings.**
 
 [`code/llm/prompts.py`](../code/llm/prompts.py) contains the original system prompts, gist and tagging templates, all ten assessment questions, their five response options, and the rating output instructions. Wording was extracted from the private reference repository's `1_get_explanations.py`, `2_get_tags.py`, and `2_get_ratings.py`. No proverb examples or credentials are included.
 
