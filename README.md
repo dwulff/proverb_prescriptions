@@ -12,3 +12,5 @@ Rscript code/analysis.R
 Setup installs the versions in `renv.lock` and requires internet access. Analysis runs offline and writes to `figures/` and `results/`. The generated `results/` folder is excluded from Git.
 
 See [data/CODEBOOK.md](data/CODEBOOK.md) for input schemas, scales, and provenance, and [docs/analysis.md](docs/analysis.md) for outputs and analysis conventions. The analysis starts from the supplied annotations and cached topic map; it does not regenerate them from books or language models.
+
+The original LLM prompts and an optional annotation runner are in [code/llm/](code/llm/); see [docs/llm.md](docs/llm.md) for model settings, usage, and historical limitations.
