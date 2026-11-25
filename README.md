@@ -13,4 +13,4 @@ Setup installs the versions in `renv.lock` and requires internet access. Analysi
 
 See [data/CODEBOOK.md](data/CODEBOOK.md) for input schemas, scales, and provenance, and [docs/analysis.md](docs/analysis.md) for outputs and analysis conventions. The analysis starts from the supplied annotations and cached topic map; it does not regenerate them from books or language models.
 
-The original LLM prompts and an optional annotation runner are in [code/llm/](code/llm/); see [docs/llm.md](docs/llm.md) for model settings, usage, and historical limitations.
+The [historical LLM scripts](code/llm/historical/) preserve the original annotation code; [code/llm/](code/llm/) also contains extracted prompts and a separately adapted runner. See [docs/llm.md](docs/llm.md) for settings, usage, and historical limitations.

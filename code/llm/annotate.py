@@ -1,4 +1,4 @@
-"""Optional private annotation rerun using the original prompts (standard library only)."""
+"""Adapted rerun, NOT historical generation code; see historical/ and docs/llm.md."""
 import argparse
 import csv
 import json
